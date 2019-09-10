@@ -9,7 +9,8 @@
     "lower-case-csv": "for f in metric/*.csv; do sed -i -e 's/\\(.*\\)/\\L\\1/' $f ; done",
     "sort-csv": "for f in metric/*.csv; do sort -n -o $f $f ; done",
     "clean-csv": "export LC_NUMERIC=C && npm run lower-case-csv && npm run sort-csv",
-    "build": "node ./build/geography.js && node ./build/data.js"
+    "build": "node ./build/geography.js && node ./build/data.js && node ./build/meta.js",
+    "build-nometa": "node ./build/geography.js && node ./build/data.js"
   },
   "license": "ISC",
   "dependencies": {

@@ -7,9 +7,6 @@ const state = config.fips.substring(0, 2)
 const county = config.fips.length > 2 ? config.fips.substring(2, 5) : null
 
 // create folders if they don't exist
-if (!fs.existsSync('meta')) {
-  fs.mkdirSync('meta')
-}
 if (!fs.existsSync('metric')) {
   fs.mkdirSync('metric')
 }
@@ -23,7 +20,6 @@ config.years.forEach(year => {
 // get all the census goodies
 Promise.all(urls.map(url => fetch(url).then(resp => resp.json()))).then(
   jsons => {
-    console.log(jsons[0][0])
     processReturn(jsons)
   }
 )
@@ -115,15 +111,3 @@ function createURL(year) {
         ','
       )}&in=state:${state}&for=county:*`
 }
-
-// write out meta
-dataConfig.forEach((rec, idx) => {
-  let metaOut = `## ${rec.title}\n\n`
-  if (rec.subtitle) metaOut += `${rec.subtitle}\n\n`
-  metaOut += `### Source\n\n`
-  metaOut += `U.S. Census Bureau, American Community Survey 5-Year Estimates`
-
-  fs.writeFile(`./meta/m${idx + 1}.md`, metaOut, () =>
-    console.log(`...done writing meta file m${idx + 1}`)
-  )
-})
