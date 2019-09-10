@@ -13,10 +13,13 @@ if (county) {
     'https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/5m/2017/county.json'
 }
 
+// create geojson folder
+if (!fs.existsSync('geojson')) {
+  fs.mkdirSync('geojson')
+}
+
 // get the block groups for the state
-fetch(
-  url
-)
+fetch(url)
   .then(res => res.json())
   .then(res => {
     let output = cleanGeography(res)
