@@ -1,9 +1,18 @@
 const fs = require('fs')
 const fetch = require('node-fetch')
 const config = require('./config')
+const dataConfig = require('../data')
 
 const state = config.fips.substring(0, 2)
 const county = config.fips.length > 2 ? config.fips.substring(2, 5) : null
+
+// create folders if they don't exist
+if (!fs.existsSync('meta')) {
+  fs.mkdirSync('meta')
+}
+if (!fs.existsSync('metric')) {
+  fs.mkdirSync('metric')
+}
 
 // make array of census API url's
 const urls = []
@@ -106,3 +115,15 @@ function createURL(year) {
         ','
       )}&in=state:${state}&for=county:*`
 }
+
+// write out meta
+dataConfig.forEach((rec, idx) => {
+  let metaOut = `## ${rec.title}\n\n`
+  if (rec.subtitle) metaOut += `${rec.subtitle}\n\n`
+  metaOut += `### Source\n\n`
+  metaOut += `U.S. Census Bureau, American Community Survey 5-Year Estimates`
+
+  fs.writeFile(`./meta/m${idx + 1}.md`, metaOut, () =>
+    console.log(`...done writing meta file m${idx + 1}`)
+  )
+})
