@@ -15,8 +15,6 @@ export default {
   ],
   searchPaths: [],
   style: 'positron-mecklenburg.json',
-  fillLayerBefore: 'building',
-  lineLayerBefore: 'place_other',
   colors: {
     default: ['#f0f9e8', '#bae4bc', '#7bccc4', '#43a2ca', '#0868ac']
   },
