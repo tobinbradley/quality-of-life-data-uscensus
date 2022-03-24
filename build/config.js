@@ -1,6 +1,6 @@
 module.exports = {
   fips: '37071', // 2 digits for state, 5 digits for county
-  years: [2013, 2017],
+  years: [2013, 2017, 2020],
   columns: [
     'B01001_001E', // population
     'B19013_001E', // median household income

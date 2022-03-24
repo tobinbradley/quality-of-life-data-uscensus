@@ -1,25 +1,18 @@
 {
   "name": "qol-data-uscensus",
   "author": "Tobin Bradley",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "creates data for the quality of life dashboard automatically from the US census",
   "main": "index.js",
-  "scripts": {
-    "test": "tape -r esm ./test/index.js | tap-spec",
-    "lower-case-csv": "for f in metric/*.csv; do sed -i -e 's/\\(.*\\)/\\L\\1/' $f ; done",
-    "sort-csv": "for f in metric/*.csv; do sort -n -o $f $f ; done",
-    "clean-csv": "export LC_NUMERIC=C && npm run lower-case-csv && npm run sort-csv",
-    "build": "node ./build/geography.js && node ./build/data.js && node ./build/meta.js",
-    "build-nometa": "node ./build/geography.js && node ./build/data.js"
+  "scripts": {    
+    "build": "node ./build/geography.js && node ./build/data.js && node ./build/meta.js"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "esm": "^3.2.25",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "fast-csv": "^3.4.0",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.11.0"
+    "fast-csv": "^3.4.0"
   }
 }

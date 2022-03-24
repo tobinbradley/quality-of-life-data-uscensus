@@ -1,0 +1,70 @@
+{
+  "version": 8,
+  "name": "Generic Map Style",
+  "sources": {
+    "mapbox-satellite": {
+      "type": "raster",
+      "tiles": [
+        "https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
+        ],
+        "tileSize": 256,
+    "neighborhoods": {
+      "type": "geojson",
+      "attribution": "<a href='https://mcmap.org/qol' target='_blank'>Quality of Life Explorer</a>",
+      "data": "data/geography/geography.geojson.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgb(242,243,240)"
+      }
+    },
+    {
+      "id": "simple-tiles",
+      "type": "raster",
+      "source": "raster-tiles",
+      "minzoom": 0,
+      "maxzoom": 22
+      }
+    {
+      "id": "neighborhoods",
+      "type": "fill",
+      "source": "neighborhoods",
+      "paint": {
+        "fill-color": "rgba(0,0,0,0)",
+        "fill-outline-color": "white"
+      }
+    },
+    {
+      "id": "neighborhoods-highlight",
+      "type": "fill",
+      "source": "neighborhoods",
+      "filter": ["match", ["get", "id"], ["-1"], true, false],
+      "paint": {
+        "fill-color": "#FDE047"
+      }
+    },
+    {
+      "id": "neighborhoods-outline",
+      "type": "line",
+      "source": "neighborhoods",
+      "layout": {},
+      "filter": ["match", ["get", "id"], ["-1"], true, false],
+      "paint": {
+        "line-color": "#DB2777",
+        "line-width": 3
+      }
+    },
+    {
+      "id": "neighborhoods-3d",
+      "type": "fill-extrusion",
+      "source": "neighborhoods",
+      "layout": {
+        "visibility": "none"
+      }
+    }
+  ]
+}

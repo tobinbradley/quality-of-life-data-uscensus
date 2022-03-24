@@ -51,7 +51,7 @@ function cleanAttributes(geojson) {
 
 // write out file
 function writeGeoJSON(geojson) {
-  fs.writeFile('./geojson/census.geojson.json', JSON.stringify(geojson), () =>
+  fs.writeFile('./geojson/geography.geojson.json', JSON.stringify(geojson), () =>
     console.log('...done writing geography file')
   )
 }
