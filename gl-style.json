@@ -2,12 +2,13 @@
   "version": 8,
   "name": "Generic Map Style",
   "sources": {
-    "mapbox-satellite": {
+    "raster-tiles": {
       "type": "raster",
       "tiles": [
         "https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-        ],
-        "tileSize": 256,
+      ],
+      "tileSize": 256
+    },
     "neighborhoods": {
       "type": "geojson",
       "attribution": "<a href='https://mcmap.org/qol' target='_blank'>Quality of Life Explorer</a>",
@@ -28,7 +29,7 @@
       "source": "raster-tiles",
       "minzoom": 0,
       "maxzoom": 22
-      }
+    },
     {
       "id": "neighborhoods",
       "type": "fill",
