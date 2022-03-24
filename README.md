@@ -20,4 +20,4 @@ This repo contains build scripts that will download data and geography from the 
 
 Next, move the `geojson/geography.geojson.json` file to Explorer's `public/data/geography/` and `gl-style.json` to the Explorer's `src/assets/`, replacing the files that are currently there.
 
-From the Explorer's root folder, run `npm run prebuild` to process the data. Now you're ready to run the Explorer with your new Census data.
+From the Explorer's root folder, run `npm run prebuild` to process the data. Now you're ready to run the Explorer with your new Census data. You'll also want to either customize the `src/assets/neighborhood-groups.json` file to your groups or set it to empty (i.e. `{}`).
