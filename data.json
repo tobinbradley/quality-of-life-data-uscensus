@@ -1,138 +1,112 @@
 [
   {
-    "metric": "1",
+    "metric": "m1",
     "category": "character",
     "label": "People",
     "title": "Population",
     "sum": true
   },
   {
-    "metric": "2",
+    "metric": "m2",
     "category": "economics",
     "title": "Median Household Income",
     "format": "money"
   },
   {
-    "metric": "3",
+    "metric": "m3",
     "category": "character",
     "title": "Median Age",
     "label": "Years"
   },
   {
-    "metric": "4",
-    "category": "character",
-    "title": "Population Under 18",
-    "label": "Years"
-  },
-  {
-    "metric": "5",
+    "metric": "m5",
     "category": "character",
     "title": "Males"
   },
   {
-    "metric": "6",
+    "metric": "m6",
     "category": "character",
     "title": "Females"
   },
   {
-    "metric": "7",
+    "metric": "m7",
     "category": "character",
     "title": "White or Caucasian",
     "format": "percent"
   },
   {
-    "metric": "8",
+    "metric": "m8",
     "category": "character",
     "title": "Black or African American",
     "format": "percent"
   },
   {
-    "metric": "9",
+    "metric": "m9",
     "category": "character",
     "title": "American Indian and Alaska Native",
     "format": "percent"
   },
   {
-    "metric": "10",
+    "metric": "m10",
     "category": "character",
     "title": "Asian",
     "format": "percent"
   },
   {
-    "metric": "11",
+    "metric": "m11",
     "category": "character",
     "title": "Native Hawaiian and Other Pacific Islander",
     "format": "percent"
   },
   {
-    "metric": "12",
+    "metric": "m12",
     "category": "character",
     "title": "Hispanic or Latino",
     "format": "percent"
   },
   {
-    "metric": "13",
-    "category": "economics",
-    "title": "Food Stamps/SNAP",
-    "label": "Households",
-    "subtitle": "Household received Food Stamps/SNAP in the past 12 months",
-    "sum": true
-  },
-  {
-    "metric": "14",
+    "metric": "m14",
     "category": "economics",
     "title": "Social Security",
     "subtitle": "Households with Social Security income",
     "label": "Households",
     "sum": true
-  },
+  },  
   {
-    "metric": "15",
-    "category": "economics",
-    "title": "Poverty",
-    "subtitle": "Poverty status in the past 12 months"
-  },
-  {
-    "metric": "16",
+    "metric": "m16",
     "category": "economics",
     "title": "Commuters Driving Alone",
     "label": "Commuters",
     "sum": true
   },
   {
-    "metric": "17",
+    "metric": "m17",
     "category": "economics",
     "title": "Commuters Using Public Transit",
     "label": "Commuters",
     "sum": true
   },
   {
-    "metric": "18",
+    "metric": "m18",
     "category": "economics",
     "title": "Commute by Walking",
     "label": "Commuters",
     "sum": true
   },
   {
-    "metric": "19",
-    "category": "economics",
-    "title": "Travel Time to Work",
-    "label": "Minutes"
-  },
-  {
-    "metric": "20",
+    "metric": "m20",
     "category": "economics",
     "title": "Median Gross Rend",
     "format": "money"
   },
   {
-    "metric": "21",
+    "metric": "m21",
     "category": "economics",
     "title": "Median Home Value",
     "format": "money"
   },
   {
-    "metric": "22",
+    "metric": "m22",
     "category": "character",
     "title": "Population 65 or Older",
     "sum": true,
