@@ -7,10 +7,10 @@ const county = config.fips.length > 2 ? config.fips.substring(2, 5) : null
 let url = ''
 
 if (county) {
-  url = `https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/500k/2017/${state}/block-group.json`
+  url = `https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/500k/2020/${state}/block-group.json`
 } else {
   url =
-    'https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/5m/2017/county.json'
+    'https://raw.githubusercontent.com/uscensusbureau/citysdk/master/v2/GeoJSON/5m/2020/county.json'
 }
 
 // create geojson folder
