@@ -87,7 +87,7 @@ function processReturn(jsons) {
     })
 
     // write csv
-    fs.writeFile(`./metric/r${colIdx + 1}.csv`, header + body, () =>
+    fs.writeFile(`./metric/r${dataConfig[colIdx].metric.replace('m', '')}.csv`, header + body, () =>
       console.log(`...done writing metric file m${colIdx + 1}`)
     )
   })
