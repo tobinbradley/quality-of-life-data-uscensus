@@ -13,7 +13,7 @@ dataConfig.forEach((rec, idx) => {
   metaOut += `### Source\n\n`
   metaOut += `U.S. Census Bureau, American Community Survey 5-Year Estimates`
 
-  fs.writeFile(`./meta/m${idx + 1}.md`, metaOut, () =>
+  fs.writeFile(`./meta/${rec.metric}.md`, metaOut, () =>
     console.log(`...done writing meta file m${idx + 1}`)
   )
 })
